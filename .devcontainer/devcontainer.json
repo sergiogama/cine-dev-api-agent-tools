@@ -1,7 +1,14 @@
 {
   "name": "cine-dev",
-  "image": "mcr.microsoft.com/devcontainers/java:17",
-  "features": { "ghcr.io/devcontainers/features/maven:1": {} },
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "jdkDistro": "temurin"
+    },
+    "ghcr.io/devcontainers/features/maven:1": {
+      "version": "latest"
+    }
+  },
   "forwardPorts": [8080],
-  "postCreateCommand": "./mvnw -v"
+  "postCreateCommand": "java -version && javac -version && ./mvnw -v"
 }
