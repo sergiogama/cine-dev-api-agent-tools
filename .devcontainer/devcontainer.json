@@ -1,0 +1,9 @@
+{
+  "name": "cine-dev-api",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "features": {
+    "ghcr.io/devcontainers/features/maven:1": {}
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "./mvnw -v"
+}
